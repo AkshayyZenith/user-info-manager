@@ -10,7 +10,7 @@ st.set_page_config(page_title="User Info Manager", page_icon="👤", layout="wid
 # FastAPI backend URL
 # BACKEND_URL = "http://127.0.0.1:8000"
 # Get backend URL from environment variable or use localhost as default
-BACKEND_URL = os.environ.get("BACKEND_URL", "http://127.0.0.1:8000")
+BACKEND_URL = os.environ.get("BACKEND_URL", "https://user-info-backend.onrender.com")
 
 # Initialize session state
 if 'edit_mode' not in st.session_state:
