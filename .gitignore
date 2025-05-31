@@ -172,3 +172,86 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# ----------------------------
+# API SECURITY (Critical!)
+# ----------------------------
+# API keys/secrets
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+secrets.json
+credentials*
+*.key
+*.pem
+*.crt
+
+# API client configs
+**/openapi.json
+**/swagger.json
+**/postman_collections/
+**/insomnia/
+
+# API client configs
+**/openapi.json
+**/swagger.json
+**/postman_collections/
+**/insomnia/
+
+# ----------------------------
+# Python (FastAPI)
+# ----------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.python-version
+*.egg-info/
+dist/
+build/
+.mypy_cache/
+
+# ----------------------------
+# Frontend (Streamlit)
+# ----------------------------
+.streamlit/
+frontend/__pycache__/
+
+# ----------------------------
+# Docker/Containerization
+# ----------------------------
+.dockerignore
+docker-compose*.yml
+**/.docker/
+**/docker-compose.override.yml
+
+# ----------------------------
+# Database & Cache
+# ----------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+*.cache
+redis-data/
+
+# ----------------------------
+# IDE & Editors
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+*.sublime-workspace
+
+# ----------------------------
+# System/Temporary Files
+# ----------------------------
+Thumbs.db
+*.tmp
+*.temp
+logs/
+*.log
