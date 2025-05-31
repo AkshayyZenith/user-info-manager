@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: user-info-backend
+    env: docker
+    repo: https://github.com/AkshayyZenith/user-info-manager
+    dockerfilePath: backend/Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - backend/**
+    plan: free
+    healthCheckPath: /healthcheck
+    envVars:
+      - key: PYTHONPATH
+        value: /app
+
+  - type: web
+    name: user-info-frontend
+    env: docker
+    repo: https://github.com/AkshayyZenith/user-info-manager
+    dockerfilePath: frontend/Dockerfile
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - frontend/**
+    plan: free
+    envVars:
+      - key: BACKEND_URL
+        value: https://user-info-backend.onrender.com
