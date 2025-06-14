@@ -10,15 +10,11 @@ services:
         - backend/**
     plan: free
     healthCheckPath: /healthcheck
-    disk:
-      name: sqlite-data
-      mountPath: /data
-      sizeGB: 1
     envVars:
       - key: PYTHONPATH
         value: /app
       - key: SQLALCHEMY_DATABASE_URL
-        value: sqlite:////data/user_info.db
+        value: sqlite:///./user_info.db
 
   - type: web
     name: user-info-frontend
